@@ -1,0 +1,24 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: extract_features_component
+display_name: Extract MRI image features (Silver layer)
+version: 1
+type: command
+
+inputs:
+  input_data:
+    type: uri_folder
+    description: "tumor_images_raw data asset (yes/no folders)."
+
+outputs:
+  output_parquet:
+    type: uri_file
+    description: "Parquet file with features per image."
+
+code: ../  
+
+environment: azureml:tumor-image-env:1 
+
+command: >-
+  python src/extract_features.py
+  --input_data ${{inputs.input_data}}
+  --output_parquet ${{outputs.output_parquet}}
