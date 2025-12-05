@@ -3,7 +3,7 @@ from azure.storage.filedatalake import DataLakeServiceClient
 from azure.core.exceptions import ResourceExistsError
 
 STORAGE_ACCOUNT_NAME = "lab560103194"
-STORAGE_ACCOUNT_KEY = "COi89UPnyzE08FIehcFEISH8Ab4EIEPqSx0ixLx66NKbBSCGZshJxAYed8oGiccG0nrWQbM1V+ya+AStpW/S4w=="
+STORAGE_ACCOUNT_KEY = "acesss-key"
 CONTAINER_NAME = "lakehouse"
 
 LOCAL_DATA_DIR = "../data/brain_tumor_dataset"
