@@ -2,15 +2,12 @@ import os
 from azure.storage.filedatalake import DataLakeServiceClient
 from azure.core.exceptions import ResourceExistsError
 
-# Azure ADLS Gen2 configuration
-STORAGE_ACCOUNT_NAME = "account name"
-STORAGE_ACCOUNT_KEY = "access key"
+STORAGE_ACCOUNT_NAME = "lab560103194"
+STORAGE_ACCOUNT_KEY = "COi89UPnyzE08FIehcFEISH8Ab4EIEPqSx0ixLx66NKbBSCGZshJxAYed8oGiccG0nrWQbM1V+ya+AStpW/S4w=="
 CONTAINER_NAME = "lakehouse"
 
-# Local data directory
 LOCAL_DATA_DIR = "../data/brain_tumor_dataset"
 
-# Remote directory structure
 REMOTE_BASE_DIR = "raw/tumor_images"
 
 
@@ -69,16 +66,13 @@ def upload_images(file_system_client, local_category_dir, remote_category_dir):
 def main():
     """Main function to ingest images into ADLS Gen2"""
     print("Starting image ingestion to Azure ADLS Gen2...")
-    
-    # Initialize service client
+
     service_client = get_service_client()
     file_system_client = service_client.get_file_system_client(CONTAINER_NAME)
-    
-    # Create directory structure
+
     print("\nCreating directory structure...")
     create_directory_structure(file_system_client)
-    
-    # Upload images for each category
+  
     categories = ['yes', 'no']
     for category in categories:
         local_dir = os.path.join(LOCAL_DATA_DIR, category)

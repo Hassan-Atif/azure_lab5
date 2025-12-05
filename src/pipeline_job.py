@@ -3,10 +3,10 @@ from azure.ai.ml import MLClient, Input, dsl, load_component
 
 SUBSCRIPTION_ID = "a00dcbea-fd05-4973-82dc-120208b60116"
 RESOURCE_GROUP = "rg-60103194"
-WORKSPACE_NAME = "goodreads-dbx-60103194"
+WORKSPACE_NAME = "lab5-60103193"
 
-COMPUTE_NAME = "lab-5-cluster"
-FEATURES_DATA_ASSET = "azureml:azureml_olden_tooth_qkdfkgrpr3_output_data_output_parquet:1"
+COMPUTE_NAME = "cpu-cluster"
+FEATURES_DATA_ASSET = "azureml:azureml_purple_glass_rzq99t8w9m_output_data_output_parquet:1"
 
 FEATURE_SET_VERSION = "2"
 

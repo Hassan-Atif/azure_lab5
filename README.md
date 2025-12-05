@@ -23,6 +23,12 @@ Ingest Images → Extract & Store Features → Feature Selection → Train (Base
 - `scripts/`: Operational helpers (materialize features, deploy endpoint, test endpoint).
 - `environments/`: Environment definitions (Conda / Azure ML runtime).
 
+## Feature Extraction Info
+- num_images = 251
+- num_features = 112
+- extraction_time_seconds = 49.223
+- compute SKU (AZUREML_COMPUTE) = unknown
+- Saved features parquet to /mnt/azureml/cr/j/b48b396d55f24848879cf78141f5f96a/cap/data-capability/wd/output_parquet/features.parquet
 
 
 

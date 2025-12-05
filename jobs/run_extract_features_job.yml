@@ -10,7 +10,7 @@ command: >-
   --input_data ${{inputs.input_data}}
   --output_parquet ${{outputs.output_parquet}}
 
-environment: azureml:lab5_silver_env:2
+environment: azureml:tumor-image-env:1
 
 inputs:
   input_data:
@@ -22,5 +22,4 @@ outputs:
     type: uri_folder
     mode: rw_mount
 
-# Use your existing compute cluster from last lab
 compute: azureml:cpu-cluster
