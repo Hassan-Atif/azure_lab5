@@ -1,0 +1,6 @@
+$schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
+name: lab5-ga-env
+version: 1
+description: "GA environment with DEAP, sklearn, numpy, pandas"
+image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+conda_file: lab5_ga_env.yml
